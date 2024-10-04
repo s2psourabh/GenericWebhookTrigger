@@ -19,24 +19,24 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/s2psourabh/GenericWebhookTrigger.git', branch: "${ref.split('/').last()}"
+                git url: 'git@github.com:s2psourabh/GenericWebhookTrigger.git', branch: "${ref.split('/').last()}"
             }
         }
         stage('Build') {
             steps {
-                sh 'echo "Building..."'
+                echo "Building..."
                 // Add build steps here
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "Running tests..."'
+                echo "Running tests..."
                 // Add test steps here
             }
         }
         stage('Deploy') {
             steps {
-                sh 'echo "Deploying..."'
+                echo "Deploying..."
                 // Add deploy steps here
             }
         }
