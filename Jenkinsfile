@@ -8,7 +8,7 @@ pipeline {
                 [key: 'repoName', value: '$.repository.name'],
                 [key: 'commitid', value: '$.after']
             ],
-            causeString: 'Triggered by Webhook',
+            causeString: 'Triggered due to PUSH to $ref branch of $repoFullName',
             token: 'sample-token',
             printContributedVariables: true,
             printPostContent: true,
