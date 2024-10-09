@@ -20,7 +20,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 #git url: 'git@github.com:s2psourabh/GenericWebhookTrigger.git', branch: "${ref.split('/').last()}"
-		echo "Git Repo Name--> $.repository.name"
+		echo "Git Repo Name--> $.repository.name Hu hA.."
             }
         }
         stage('Build') {
