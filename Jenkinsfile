@@ -1,4 +1,4 @@
-@Library('my-shared-library') _
+#@Library('my-shared-library') _
 
 pipeline {
     agent any
@@ -9,7 +9,8 @@ pipeline {
                 script {
                     // Call the updateGitHubStatus function from the shared library, Correct
                     // No need to pass fullname and commithash manually; they are set by the webhook trigger
-                    updateGitHubStatus()
+			echo "Triggering Jobs: Without Groovy Scriptingi DATE:$(date)"
+                    #updateGitHubStatus()
                 }
             }
         }
