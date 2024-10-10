@@ -13,7 +13,7 @@ pipeline {
             printContributedVariables: true,
             printPostContent: true,
             regexpFilterText: '$ref',
-            //regexpFilterExpression: 'refs/heads/*'
+            ////regexpFilterExpression: 'refs/heads/*'
         )
     }
     stages {
