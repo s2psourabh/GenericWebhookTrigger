@@ -3,7 +3,7 @@ pipeline {
     triggers {
         GenericTrigger(
             genericVariables: [
-                [key: 'ref', value: '$.ref', regexpFilter: 'refs/heads/*'],
+                [key: 'ref', value: '$.ref'], // regexpFilter: 'refs/heads/*'],
                 [key: 'fullName', value: '$.repository.full_name'],
                 [key: 'repoName', value: '$.repository.name'],
                 [key: 'commithash', value: '$.after']
@@ -19,7 +19,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                //git url: 'git@github.com:s2psourabh/GenericWebhookTrigger.git', branch: "${ref.split('/').last()}"
+                //git url: 'git@github.com:s2psourabh/GenericWebhookTrigger.git', branch: "${ref.split('/').last()}"---
 		echo "REPO FULL NAME-> ${fullName}"
 		echo "REPO NAME-> ${repoName}"
 		echo "COMMIT ID-> ${commithash}"
