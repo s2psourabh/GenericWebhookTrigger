@@ -3,12 +3,12 @@ pipeline {
     triggers {
         GenericTrigger(
             genericVariables: [
-                [key: 'ref', value: '$.ref', regexpFilter: 'refs/heads/'],
+                [key: 'ref', value: '$.ref', regexpFilter: 'refs/heads/*'],
                 [key: 'fullName', value: '$.repository.full_name'],
                 [key: 'repoName', value: '$.repository.name'],
                 [key: 'commithash', value: '$.after']
             ],
-            causeString: 'Triggered due to PUSH to $ref branch of $repoFullName',
+            causeString: 'Triggered due to PUSH to $ref branch of $fullName',
             token: 'sample-token',
             printContributedVariables: true,
             printPostContent: true,
