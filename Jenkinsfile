@@ -13,7 +13,7 @@ pipeline {
             printContributedVariables: true,
             printPostContent: true,
             regexpFilterText: '$ref',
-            regexpFilterExpression: 'refs/heads/.*'
+            regexpFilterExpression: 'refs/heads/*'
         )
     }
     stages {
@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo "Building..."
+                echo "Building."
                 // Add build steps here
             }
         }
